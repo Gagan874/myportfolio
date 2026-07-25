@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VICE CITY PORTFOLIO // YOUR NAME</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts for Modern Synthwave / GTA Vibe -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;0,900;1,900&family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'title': ['"Montserrat"', 'sans-serif'],
+                        'sans': ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    colors: {
+                        'vice-bg': '#070510',
+                        'vice-pink': '#f43f5e',
+                        'vice-purple': '#a855f7',
+                        'vice-cyan': '#06b6d4',
+                        'vice-yellow': '#facc15',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* GTA Style Text Gradients with Heavy Shadow for Maximum Visibility */
+        .gta-gradient-text {
+            background: linear-gradient(180deg, #ffffff 30%, #f43f5e 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.9));
+        }
+        .gta-neon-text {
+            background: linear-gradient(135deg, #06b6d4 0%, #a855f7 50%, #f43f5e 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.9));
+        }
+        /* Glassmorphism Panel Styling with Enhanced Backdrop Darkening */
+        .glass-panel {
+            background: rgba(7, 5, 16, 0.88);
+            -webkit-background-clip: text;
+            backdrop-filter: blur(24px);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+        }
+        .vice-glow {
+            box-shadow: 0 0 60px -5px rgba(244, 63, 94, 0.4), 0 20px 40px rgba(0, 0, 0, 0.7);
+        }
+        .text-glow {
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.9), 0 0 20px rgba(0, 0, 0, 0.8);
+        }
+    </style>
+
+    <style>
+  @keyframes auto-glow {
+    0%, 100% {
+      box-shadow: 0 0 15px rgba(244, 63, 94, 0.6), 0 0 30px rgba(244, 63, 94, 0.3);
+      border-color: rgba(244, 63, 94, 0.8);
+    }
+    50% {
+      box-shadow: 0 0 25px rgba(6, 182, 212, 0.8), 0 0 45px rgba(6, 182, 212, 0.5);
+      border-color: rgba(6, 182, 212, 0.9);
+    }
+  }
+
+  .auto-glow-btn {
+    animation: auto-glow 3s infinite ease-in-out;
+  }
+</style>
+
+<style>
+  /* Cyan Glow Animation (For GitHub) */
+  @keyframes auto-glow-cyan {
+    0%, 100% {
+      box-shadow: 0 0 12px rgba(6, 182, 212, 0.5), 0 0 25px rgba(6, 182, 212, 0.2);
+      border-color: rgba(6, 182, 212, 0.7);
+    }
+    50% {
+      box-shadow: 0 0 22px rgba(6, 182, 212, 0.9), 0 0 35px rgba(6, 182, 212, 0.5);
+      border-color: rgba(6, 182, 212, 1);
+    }
+  }
+
+  /* Pink/Purple Glow Animation (For LinkedIn) */
+  @keyframes auto-glow-pink {
+    0%, 100% {
+      box-shadow: 0 0 12px rgba(244, 63, 94, 0.5), 0 0 25px rgba(244, 63, 94, 0.2);
+      border-color: rgba(244, 63, 94, 0.7);
+    }
+    50% {
+      box-shadow: 0 0 22px rgba(244, 63, 94, 0.9), 0 0 35px rgba(244, 63, 94, 0.5);
+      border-color: rgba(244, 63, 94, 1);
+    }
+  }
+
+  .glow-cyan {
+    animation: auto-glow-cyan 3s infinite ease-in-out;
+  }
+
+  .glow-pink {
+    animation: auto-glow-pink 3s infinite ease-in-out;
+  }
+</style>
+
+</head>
+<body class="bg-vice-bg text-slate-100 font-sans antialiased overflow-x-hidden selection:bg-vice-pink selection:text-white relative">
+
+    <!-- Vibrant GTA VI Aesthetic Background Image Container -->
+    <div class="fixed inset-0 pointer-events-none z-0">
+        <!-- Background Wallpaper Image (Increased Opacity to 75% for Strong Visibility) -->
+        <img 
+            src="https://w0.peakpx.com/wallpaper/677/800/HD-wallpaper-gta-vice-city-skyline-palm-trees-gta-synthwave-games-artist-artwork-digital-art.jpg" 
+            alt="GTA Vice City Background" 
+            class="w-full h-full object-cover object-center opacity-75 scale-100 filter contrast-125 saturate-150"
+        />
+        <!-- Subtle Vignette to Frame Content without Hiding the Art -->
+        <div class="absolute inset-0 bg-radial-vignette bg-gradient-to-b from-vice-bg/70 via-transparent to-vice-bg/85"></div>
+        <!-- Vivid Ambient Neon Glow Highlights -->
+        <div class="absolute top-0 left-1/4 w-[500px] h-[500px] bg-vice-pink/30 rounded-full blur-[120px]"></div>
+        <div class="absolute bottom-0 right-1/4 w-[600px] h-[600px] bg-vice-purple/30 rounded-full blur-[140px]"></div>
+    </div>
+
+    <!-- Main Content Wrapper -->
+    <div class="relative z-10">
+
+        <!-- Vice City HUD Header -->
+        <header class="fixed top-0 left-0 right-0 z-50 bg-vice-bg/90 backdrop-blur-lg border-b border-white/15 shadow-2xl">
+            <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+                
+                <!-- Logo / Typography Badge -->
+                <a href="#" class="font-title font-black text-2xl tracking-tighter italic flex items-center gap-1 group">
+                    <span class="text-white group-hover:text-vice-cyan transition">VICE</span>
+                    <span class="text-vice-pink">DEV</span>
+                    <span class="text-xs font-sans font-extrabold bg-vice-yellow text-black px-1.5 py-0.5 rounded uppercase not-italic tracking-normal ml-1">VI</span>
+                </a>
+
+                <!-- Nav Links -->
+                <nav class="hidden md:flex gap-8 text-xs font-bold tracking-widest uppercase text-slate-200">
+                    <a href="#about" class="hover:text-vice-cyan transition">// OVERVIEW</a>
+                    <a href="#projects" class="hover:text-vice-pink transition">// MISSIONS</a>
+                    <a href="#experience" class="hover:text-vice-yellow transition">// EXPERIENCE</a>
+                    <a href="#education" class="hover:text-vice-cyan transition">// EDUCATION</a>
+                    <a href="#skills" class="hover:text-vice-purple transition">// SKILLS</a>
+                    <a href="#contact" class="hover:text-vice-yellow transition">// CONTACT</a>
+                </nav>
+
+                <!-- Wanted Level HUD (Text Stars) -->
+                <div class="flex items-center gap-2 bg-black/70 border border-white/20 px-4 py-2 rounded-full backdrop-blur-md shadow-lg">
+                    <span class="text-[10px] font-bold text-slate-300 uppercase tracking-widest hidden sm:inline">WANTED</span>
+                    <div class="flex gap-1 text-vice-yellow text-sm">
+                        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Hero Section -->
+        <section id="about" class="min-h-screen flex items-center pt-28 pb-16 px-6 max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-8 space-y-6">
+                    <!-- Location Badge -->
+                    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-vice-bg/80 border border-vice-pink/50 text-vice-pink text-xs font-bold tracking-widest uppercase backdrop-blur-md shadow-lg">
+                        <span class="w-2.5 h-2.5 rounded-full bg-vice-pink animate-ping"></span>
+                        LEONIDA // VICE CITY
+                    </div>
+                    
+
+                    <h1 class="text-6xl sm:text-8xl font-title font-black italic tracking-tighter uppercase leading-none">
+                        <span class="gta-gradient-text block">GAGAN SANDESH</span>
+                        <span class="gta-neon-text block text-4xl sm:text-6xl mt-2">FULL STACK OPERATOR</span>
+                    </h1>
+
+                    <p class="text-white text-lg sm:text-xl font-medium max-w-2xl leading-relaxed text-glow bg-black/40 p-4 rounded-2xl border border-white/10 backdrop-blur-sm">
+                        Building high-converting digital web apps, automated video processing pipelines, and modern scalable software solutions.
+                    </p>
+
+                    <!-- Action Buttons -->
+                    <div class="flex flex-wrap gap-4 pt-2">
+                        <a href="#projects" class="bg-gradient-to-r from-vice-pink to-vice-purple hover:from-pink-600 hover:to-purple-600 text-white font-title font-black tracking-wider text-sm px-8 py-4 rounded-xl transition shadow-xl shadow-vice-pink/40 italic uppercase">
+                            START MISSIONS
+                        </a>
+                        <!-- Auto-Glowing Resume Button -->
+                        <a href="Gagan_Sandesh_Resume_Updated.pdf" target="_blank" rel="noopener noreferrer" 
+                        class="auto-glow-btn inline-flex items-center gap-3 bg-gradient-to-r from-vice-pink via-vice-purple to-vice-cyan hover:opacity-90 text-white font-title font-black text-xs sm:text-sm px-8 py-4 rounded-2xl transition duration-300 uppercase tracking-wider italic shadow-2xl">
+                        <!-- View / Document Icon -->
+                        <svg class="w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
+                        </svg>
+                           VIEW RESUME
+                        </a>
+                        <!-- GitHub Button (Glowing Cyan) -->
+                        <a href="https://github.com/Gagan874" target="_blank" rel="noopener noreferrer" 
+                        class="auto-glow-btn inline-flex items-center gap-3 bg-gradient-to-r from-vice-pink via-vice-purple to-vice-cyan hover:opacity-90 text-white font-title font-black text-xs sm:text-sm px-8 py-4 rounded-2xl transition duration-300 uppercase tracking-wider italic shadow-2xl">
+                        <svg class="w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                        </svg>
+                            GITHUB REPO <span class="text-vice-cyan"></span>
+                        </a>
+
+                        <!-- LinkedIn Button (Glowing Pink) -->
+                        <a href="https://www.linkedin.com/in/gagan-sandesh-37697a257" target="_blank" rel="noopener noreferrer" 
+                        class="auto-glow-btn inline-flex items-center gap-3 bg-gradient-to-r from-vice-pink via-vice-purple to-vice-cyan hover:opacity-90 text-white font-title font-black text-xs sm:text-sm px-8 py-4 rounded-2xl transition duration-300 uppercase tracking-wider italic shadow-2xl">
+                        <svg class="w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                           <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+                        </svg>       
+                        LINKEDIN <span class="text-vice-pink"></span>
+                        </a>
+                </div>
+
+                <!-- Player Status Card -->
+                <div class="lg:col-span-4">
+                    <div class="glass-panel p-8 rounded-3xl border border-white/20 vice-glow relative overflow-hidden">
+                        <div class="absolute -right-6 -bottom-6 text-9xl font-title font-black italic opacity-30 text-black select-none">VI</div>
+                        
+                        <div class="space-y-6 relative z-10">
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <span class="text-xs font-bold text-slate-300 uppercase tracking-widest">CHARACTER</span>
+                                    <h3 class="text-2xl font-title font-black italic text-white">DEVELOPER</h3>
+                                </div>
+                                <span class="bg-vice-cyan/30 border border-vice-cyan/60 text-vice-cyan text-xs font-bold px-3 py-1 rounded-full uppercase shadow-md">ONLINE</span>
+                            </div>
+
+                            <hr class="border-white/15" />
+
+                            <!-- Stats List -->
+                            <div class="space-y-4 text-sm font-bold">
+                                <div class="flex justify-between">
+                                    <span class="text-slate-300">STATUS</span>
+                                    <span class="text-vice-yellow">AVAILABLE FOR HIRE</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-slate-300">PRIMARY TOOL</span>
+                                    <span class="text-white">REACT / JS / PYTHON</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-slate-300">SPECIALTY</span>
+                                    <span class="text-vice-pink">JAVA / AI TOOLS</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Missions / Projects Section -->
+        <section id="projects" class="py-24 px-6 max-w-7xl mx-auto">
+            <div class="glass-panel p-8 sm:p-12 rounded-3xl mb-12">
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-4">
+                    <div>
+                        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-vice-bg/80 border border-vice-pink/50 text-vice-pink text-xs font-bold tracking-widest uppercase backdrop-blur-md shadow-lg">
+                        <span class="text-vice-pink font-bold text-xs tracking-widest uppercase block mb-2">// SELECT MISSION</span></div>
+                        <h2 class="text-4xl sm:text-6xl font-title font-black italic uppercase tracking-tight text-white">ACTIVE OPERATIONS</h2>
+                    </div>
+                    <p class="text-slate-100 max-w-lg text-sm font-medium leading-relaxed">
+                    Pure vibe coding meets full-stack precision: custom web apps, automated scripts, and end-to-end media workflows built for speed and results.
+                    </p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <!-- Mission Card 1 -->
+                
+                <!-- Mission #01 Card (Entire Card Clickable) -->
+<a href="https://github.com/Gagan874/HealthCare-Chatbot" target="_blank" rel="noopener noreferrer" 
+   class="glass-panel rounded-3xl p-8 border border-white/15 hover:border-vice-cyan/60 transition duration-300 group flex flex-col justify-between block cursor-pointer">
+    <div>
+        <div class="flex justify-between items-start mb-6">
+            <span class="text-xs font-bold uppercase tracking-widest bg-vice-cyan/30 text-vice-cyan px-3 py-1 rounded-full border border-vice-cyan/40 shadow-sm">MISSION #01</span>
+            <span class="text-xs font-bold text-slate-300 group-hover:text-vice-cyan transition">2025 RELEASE ➔</span>
+        </div>
+        <h3 class="text-2xl font-title font-black italic text-white group-hover:text-vice-cyan transition mb-3 uppercase">HealthCare-Chatbot</h3>
+        <p class="text-slate-200 text-sm leading-relaxed mb-8">HealthCare Chatbot is an AI-powered web application built using React, Python, and MongoDB that provides users with basic healthcare assistance, symptom-based guidance, and real-time chat support through an interactive and user-friendly interface.</p>
+    </div>
+    
+    <div class="flex flex-wrap gap-2 pt-4 border-t border-white/15 text-xs font-bold text-vice-cyan">
+        <span>PYTHON</span> • <span>LLMs</span> • <span>MONGO DB</span> • <span>GEMINI API</span>
+    </div>
+</a>
+
+                <!-- Mission Card 2 -->
+               <!-- Mission #02 Card (Entire Card Clickable) -->
+                <a href="https://github.com/Gagan874/Hirely-AI-Powered-job-search-application" target="_blank" rel="noopener noreferrer" 
+                class="glass-panel rounded-3xl p-8 border border-white/15 hover:border-vice-cyan/60 transition duration-300 group flex flex-col justify-between block cursor-pointer">
+                <div>
+                <div class="flex justify-between items-start mb-6">
+                   <span class="text-xs font-bold uppercase tracking-widest bg-vice-cyan/30 text-vice-cyan px-3 py-1 rounded-full border border-vice-cyan/40 shadow-sm">MISSION #02</span>
+                   <span class="text-xs font-bold text-slate-300 group-hover:text-vice-cyan transition">2025 RELEASE ➔</span>
+                </div>
+                   <h3 class="text-2xl font-title font-black italic text-white group-hover:text-vice-cyan transition mb-3 uppercase">Hirely AI-Powered Job Search and Resume ATS Score Check Application</h3>
+                   <p class="text-slate-200 text-sm leading-relaxed mb-8">Full-stack web application with AI power using Python designed for students to search for a job and build ATS friendly resume.</p>
+                </div>
+    
+                <div class="flex flex-wrap gap-2 pt-4 border-t border-white/15 text-xs font-bold text-vice-cyan">
+                    <span>REACT JS</span> • <span>GEMINI API</span> • <span>PYTHON</span> • <span>VIBE CODE</span>
+                </div>
+                </a>
+
+            </div>
+        </section>
+
+        <!-- Education / Knowledge Base Section -->
+<section id="education" class="py-24 px-6 max-w-7xl mx-auto border-t border-white/10">
+    <div class="glass-panel p-8 sm:p-12 rounded-3xl mb-12">
+        <span class="text-vice-yellow font-bold text-xs tracking-widest uppercase block mb-2">// KNOWLEDGE BASE</span>
+        <h2 class="text-4xl sm:text-6xl font-title font-black italic uppercase tracking-tight text-white">ACADEMIC & CERTIFICATIONS</h2>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+        <!-- Education Card 1 -->
+        <div class="glass-panel p-8 rounded-3xl border border-white/15 hover:border-vice-yellow/60 transition duration-300 flex flex-col justify-between">
+            <div>
+                <div class="flex justify-between items-start mb-4">
+                    <span class="text-xs font-bold uppercase tracking-widest bg-vice-yellow/20 text-vice-yellow px-3 py-1 rounded-full border border-vice-yellow/40">SSLC</span>
+                    <span class="text-xs font-bold text-slate-300">2018 — 2019</span>
+                </div>
+
+                <h3 class="text-2xl font-title font-black italic text-white uppercase mb-1">School(10th)</h3>
+                <p class="text-vice-cyan font-bold text-xs uppercase tracking-wider mb-4">Little Angels Modern High School</p>
+
+                <p class="text-slate-200 text-sm leading-relaxed mb-6 font-medium">
+            Completed secondary education with a strong foundation in core mathematics, science, logical reasoning, and basic computer fundamentals.
+        </p>
+    </div>
+
+    <div class="pt-4 border-t border-white/10 text-xs font-bold text-slate-300">
+        <span class="text-vice-yellow">CORE FOCUS:</span> Mathematics • Science • Basics Of Computers  • Sports
+    </div>
+        </div>
+
+        <!-- Education Card 2 / Certification -->
+        <div class="glass-panel p-8 rounded-3xl border border-white/15 hover:border-vice-purple/60 transition duration-300 flex flex-col justify-between">
+    <div>
+        <div class="flex justify-between items-start mb-4">
+            <span class="text-xs font-bold uppercase tracking-widest bg-vice-purple/20 text-vice-purple px-3 py-1 rounded-full border border-vice-purple/40">PUC (CEBA)</span>
+            <span class="text-xs font-bold text-slate-300">2019 — 2021</span>
+        </div>
+
+        <h3 class="text-2xl font-title font-black italic text-white uppercase mb-1">Pre-University College</h3>
+        <p class="text-vice-purple font-bold text-xs uppercase tracking-wider mb-4">Krupanidhi PU College</p>
+
+        <p class="text-slate-200 text-sm leading-relaxed mb-6 font-medium">
+            Specialized in the CEBA stream, blending core business principles, financial accounting, and economic concepts with foundational computer science logic and programming skills.
+        </p>
+    </div>
+
+    <div class="pt-4 border-t border-white/10 text-xs font-bold text-slate-300">
+        <span class="text-vice-purple">CORE FOCUS:</span> Computer Science • Economics • Business Studies • Accountancy
+    </div>
+</div>
+<!-- Education Card 3 / Certification -->
+        <div class="glass-panel p-8 rounded-3xl border border-white/15 hover:border-vice-yellow/60 transition duration-300 flex flex-col justify-between">
+    <div>
+        <div class="flex justify-between items-start mb-4">
+            <span class="text-xs font-bold uppercase tracking-widest bg-vice-blue/20 text-vice-yellow px-3 py-1 rounded-full border border-vice-yellow/40">DEGREE</span>
+            <span class="text-xs font-bold text-slate-300">2021 — 2024</span>
+        </div>
+
+        <h3 class="text-2xl font-title font-black italic text-white uppercase mb-1">Bacholer Of Computer Applications</h3>
+        <p class="text-vice-yellow font-bold text-xs uppercase tracking-wider mb-4">The National Degree College, Basvangudi</p>
+
+        <p class="text-slate-200 text-sm leading-relaxed mb-6 font-medium">
+            Specialized in the CEBA stream, blending core business principles, financial accounting, and economic concepts with foundational computer science logic and programming skills.
+        </p>
+    </div>
+
+    <div class="pt-4 border-t border-white/10 text-xs font-bold text-slate-300">
+        <span class="text-vice-yellow">CORE FOCUS:</span> Computer Science • Economics • Business Studies • Accountancy
+    </div>
+</div>
+
+<!-- Education Card 4  / Certification -->
+        <div class="glass-panel p-8 rounded-3xl border border-white/15 hover:border-vice-purple/60 transition duration-300 flex flex-col justify-between">
+    <div>
+        <div class="flex justify-between items-start mb-4">
+            <span class="text-xs font-bold uppercase tracking-widest bg-vice-purple/20 text-vice-purple px-3 py-1 rounded-full border border-vice-purple/40">MASTER'S DEGREE</span>
+            <span class="text-xs font-bold text-slate-300">2024 — 2026</span>
+        </div>
+
+        <h3 class="text-2xl font-title font-black italic text-white uppercase mb-1">Master of Computer Applications</h3>
+        <p class="text-vice-purple font-bold text-xs uppercase tracking-wider mb-4">CMR Institute Of Technoogy</p>
+
+        <p class="text-slate-200 text-sm leading-relaxed mb-6 font-medium">
+            Advanced study in full-stack software development, modern database systems, system architecture, and intelligent automation workflows. Focused on engineering scalable web applications and software solutions.
+        </p>
+    </div>
+
+    <div class="pt-4 border-t border-white/10 text-xs font-bold text-slate-300">
+        <span class="text-vice-purple">CORE FOCUS:</span> Software Engineering • AI/ML • Database Systems • Systems Architecture • Web Development
+    </div>
+</div>
+
+    </div>
+</section>
+
+        <!-- Experience / Career Logs Section -->
+<section id="experience" class="py-24 px-6 max-w-7xl mx-auto border-t border-white/10">
+    <div class="glass-panel p-8 sm:p-12 rounded-3xl mb-12">
+        <span class="text-vice-cyan font-bold text-xs tracking-widest uppercase block mb-2">// CAREER LOGS</span>
+        <h2 class="text-4xl sm:text-6xl font-title font-black italic uppercase tracking-tight text-white">RECORD & MILESTONES</h2>
+    </div>
+
+    <!-- Timeline Container -->
+    <div class="relative pl-6  space-y-12 ml-2 sm:ml-4">
+        
+        <!-- Timeline Item 1 -->
+        <div class="relative group">
+            <!-- Neon Glowing Timeline Dot -->
+            <div class="absolute -left-[31px] sm:-left-[47px] top-1.5 w-5 h-5 rounded-full bg-vice-cyan border-4 border-vice-bg group-hover:scale-125 transition-transform duration-300 shadow-[0_0_15px_#f43f5e]"></div>
+            
+            <!-- Experience Card -->
+            <div class="glass-panel p-8 rounded-3xl border border-white/15 hover:border-vice-cyan/60 transition duration-300">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
+                    <div>
+                        <span class="text-xs font-bold uppercase tracking-widest text-vice-cyan block mb-1">INTERNSHIP</span>
+                        <h3 class="text-2xl font-title font-black italic text-white uppercase">AI DEVELOPER INTERN</h3>
+                    </div>
+                    <span class="bg-vice-pink/20 text-vice-cyan border border-vice-cyan/40 px-3 py-1 rounded-full text-xs font-bold uppercase self-start sm:self-auto">
+                        2026 — 3 MONTHS
+                    </span>
+                </div>
+
+                <p class="text-slate-200 text-sm leading-relaxed mb-6 font-medium">
+        During my internship at <span class="text-vice-cyan font-bold">InternzLearn</span>, I engineered an intelligent Healthcare Chatbot designed to assist users with medical queries, symptom analysis, and automated responses using natural language processing and modern AI workflows.
+    </p>
+
+    <!-- Highlights List -->
+    <ul class="space-y-2 text-xs text-slate-300 font-semibold mb-6">
+        <li class="flex items-center gap-2">
+            <span class="text-vice-cyan">➢</span> Developed intent-recognition and conversational logic for medical query handling.
+        </li>
+        <li class="flex items-center gap-2">
+            <span class="text-vice-cyan">➢</span> Integrated NLP models and API pipelines to deliver fast, context-aware healthcare information.
+        </li>
+        <li class="flex items-center gap-2">
+            <span class="text-vice-cyan">➢</span> Built an intuitive UI and optimized prompt flows to enhance user experience and accuracy.
+        </li>
+    </ul>
+
+    <!-- Tech Used Badges -->
+    <div class="flex flex-wrap gap-2 pt-4 border-t border-white/10 text-xs font-bold text-vice-cyan">
+        <span>PYTHON</span> • <span>NLP / LLMs</span> • <span>AI APIS</span> • <span>JAVASCRIPT</span>
+    </div>
+</div>
+
+    </div>
+</section>
+
+        <!-- Arsenal / Skills Section -->
+        <section id="skills" class="py-24 px-6 max-w-7xl mx-auto">
+            <div class="glass-panel p-8 sm:p-12 rounded-3xl">
+                <div class="mb-12">
+                    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-vice-bg/80 border border-vice-purple/50 text-vice-purple text-xs font-bold tracking-widest uppercase backdrop-blur-md shadow-lg">
+                    <span class="text-vice-purple font-bold text-xs tracking-widest uppercase block mb-2">// LOADOUT</span></div>
+                    <h2 class="text-4xl font-title font-black italic uppercase tracking-tight text-white">WEAPONS OF CHOICE</h2>
+                </div>
+
+                <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
+                    <div class="bg-black/60 p-6 rounded-2xl border border-white/15 text-center hover:border-vice-yellow transition shadow-lg">
+                        <span class="font-title font-black text-xl text-vice-yellow block mb-1">&lt;/&gt;</span>
+                        <span class="font-title font-bold text-xs text-white uppercase block">HTML5 / CSS3</span>
+                    </div>
+                    <div class="bg-black/60 p-6 rounded-2xl border border-white/15 text-center hover:border-vice-pink transition shadow-lg">
+                        <span class="font-title font-black text-xl text-vice-pink block mb-1">≈</span>
+                        <span class="font-title font-bold text-xs text-white uppercase block">TAILWIND</span>
+                    </div>
+                    <div class="bg-black/60 p-6 rounded-2xl border border-white/15 text-center hover:border-vice-cyan transition shadow-lg">
+                        <span class="font-title font-black text-xl text-vice-cyan block mb-1">JS</span>
+                        <span class="font-title font-bold text-xs text-white uppercase block">JAVASCRIPT</span>
+                    </div>
+                    <div class="bg-black/60 p-6 rounded-2xl border border-white/15 text-center hover:border-vice-purple transition shadow-lg">
+                        <span class="font-title font-black text-xl text-vice-purple block mb-1">PY</span>
+                        <span class="font-title font-bold text-xs text-white uppercase block">PYTHON</span>
+                    </div>
+                    <div class="bg-black/60 p-6 rounded-2xl border border-white/15 text-center hover:border-vice-pink transition shadow-lg">
+                        <span class="font-title font-black text-xl text-vice-pink block mb-1">AI</span>
+                        <span class="font-title font-bold text-xs text-white uppercase block">AI CODING</span>
+                    </div>
+                    <div class="bg-black/60 p-6 rounded-2xl border border-white/15 text-center hover:border-vice-yellow transition shadow-lg">
+                        <span class="font-title font-black text-xl text-vice-yellow block mb-1">VC</span> 
+                        <span class="font-title font-bold text-xs text-white uppercase block">VIBE CODER</span>
+                    </div>
+                    
+                    <div class="bg-black/60 p-6 rounded-2xl border border-white/15 text-center hover:border-vice-purple transition shadow-lg">
+                        <span class="font-title font-black text-xl text-vice-purple block mb-1">JV</span>
+                        <span class="font-title font-bold text-xs text-white uppercase block">JAVA</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-24 px-6 max-w-7xl mx-auto text-center">
+            <div class="glass-panel p-12 rounded-3xl border border-white/20 vice-glow max-w-3xl mx-auto space-y-6">
+                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-vice-bg/80 border border-vice-yellow/50 text-vice-yellow text-xs font-bold tracking-widest uppercase backdrop-blur-md shadow-lg">
+                <span class="text-vice-yellow font-bold text-xs tracking-widest uppercase block">// TRANSMISSION</span></div>
+                <h2 class="text-4xl sm:text-5xl font-title font-black italic uppercase text-white tracking-tight">READY TO WORK TOGETHER?</h2>
+                <p class="text-slate-200 max-w-md mx-auto text-sm leading-relaxed font-medium">
+                    Send a direct dispatch to start a new project, request custom automation systems, or join forces.
+                </p>
+                <div>
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=mr.gagansandesh@gmail.com&su=Project%20Inquiry" class="inline-block bg-gradient-to-r from-vice-pink via-vice-purple to-vice-cyan hover:opacity-90 text-white font-title font-black text-sm px-10 py-5 rounded-2xl transition shadow-2xl uppercase italic tracking-wider">
+                        SEND ENCRYPTED EMAIL
+                    </a>
+                </div>
+            </div>
+
+            <footer class="mt-20 text-slate-300 text-xs font-bold uppercase tracking-widest drop-shadow-md">
+                <p>© 2026 GAGAN SANDESH G // HOSTED ON VERCEL</p>
+            </footer>
+        </section>
+
+    </div>
+
+</body>
+</html>
